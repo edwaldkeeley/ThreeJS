@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #131313;
+}
+body {
+    overflow-x: hidden;
+}
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
+  mix-blend-mode: exclusion;
+  overflow-x: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  overflow-x: hidden;
+  place-items: center;
+}
+
+h1 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: white;
+  display: grid;
+  margin-top: 15rem;
+  place-items: center;
+}
+.p-OP {
+    color: white;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 10rem;
+}
+/* section {
+  margin-bottom: 100rem;
+  overflow-x: hidden;
+} */
+.h1-sect-1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: white;
+    display: grid;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    place-items: center;
+    letter-spacing: .5rem;
+}
+.p-sect-1-main {
+    background-color: rgb(17, 205, 252);
+    padding: 34px 52px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    transform: skewX(-12deg);
+
+    animation: animate1 1.2s linear infinite;
+}
+.p-sect-1-second {
+    transform: skewX(12deg);
+}
+
+@keyframes animate1{
+  0% {
+    font-size: 2rem;
+  }
+  50% {
+    font-size: 2.3rem;
+  }
+  70% {
+    font-size: 2.4rem;
+  }
+  100%{
+    font-size: 2rem;
+  }
+}
