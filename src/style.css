@@ -10,7 +10,7 @@ body {
   background-color: #131313;
 }
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 .webgl {
   position: absolute;
@@ -28,7 +28,7 @@ body {
   place-items: center;
 }
 
-h1 {
+.h1-OP {
   font-size: 8rem;
   text-transform: uppercase;
   color: white;
@@ -37,49 +37,55 @@ h1 {
   place-items: center;
 }
 .p-OP {
-    color: white;
-    text-align: center;
-    font-size: 1.4rem;
-    margin-top: 10rem;
+  color: white;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 10rem;
 }
 /* section {
   margin-bottom: 100rem;
   overflow-x: hidden;
 } */
 .h1-sect-1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+  display: grid;
+  margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
+  place-items: center;
+  letter-spacing: 0.5rem;
+}
+.p-sect-1-main {
+  background-color: rgb(17, 205, 252);
+  padding: 34px 52px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  transform: skewX(-12deg);
+
+  animation: animate1 1.2s linear infinite;
+}
+@media(max-width: 768px) {
+  .p-sect-1-main {
+    font-size: .6rem;
+  }
+  .p-sect-1-second {
+    font-size: .9rem;
+    letter-spacing: .2rem;
+  }
+  .h1-sect-1 {
+    font-size: 2rem;
+    margin-top: 10rem;
+  }
+  .h1-OP {
     font-size: 4rem;
     text-transform: uppercase;
     color: white;
     display: grid;
-    margin-top: 1.7rem;
-    margin-bottom: 1.7rem;
+    margin-top: 15rem;
     place-items: center;
-    letter-spacing: .5rem;
-}
-.p-sect-1-main {
-    background-color: rgb(17, 205, 252);
-    padding: 34px 52px;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    transform: skewX(-12deg);
-
-    animation: animate1 1.2s linear infinite;
+  }
 }
 .p-sect-1-second {
-    transform: skewX(12deg);
-}
-
-@keyframes animate1{
-  0% {
-    font-size: 2rem;
-  }
-  50% {
-    font-size: 2.3rem;
-  }
-  70% {
-    font-size: 2.4rem;
-  }
-  100%{
-    font-size: 2rem;
-  }
+  transform: skewX(12deg);
 }
