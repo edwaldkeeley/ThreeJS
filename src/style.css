@@ -21,6 +21,10 @@ body {
   overflow-x: hidden;
 }
 
+/* @import url('https://fonts.googleapis.com/css?family=Fira+Mono:400'); */
+
+
+
 .container {
   height: 100vh;
   display: grid;
@@ -51,7 +55,7 @@ body {
   text-transform: uppercase;
   color: white;
   display: grid;
-  margin-top: 1.7rem;
+  margin-top: 2rem;
   margin-bottom: 1.7rem;
   place-items: center;
   letter-spacing: 0.5rem;

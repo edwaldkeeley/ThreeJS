@@ -24,10 +24,10 @@ const geometry = new THREE.SphereBufferGeometry(0.5, 64, 64);
 // Materials
 
 const material = new THREE.MeshStandardMaterial();
-material.metalness = 0.7;
-material.roughness = 0.2;
+material.metalness = 1;
+material.roughness = 0.1;
 material.normalMap = normalTexture;
-material.color = new THREE.Color('#080808');
+material.color = new THREE.Color("#fff");
 
 // Mesh
 const sphere = new THREE.Mesh(geometry, material);
@@ -106,7 +106,6 @@ window.addEventListener("resize", () => {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 });
 
-
 /**
  * Camera
  */
@@ -136,7 +135,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
 
 /**
@@ -180,10 +179,10 @@ function onDocumentMouseMove(event) {
 const clock = new THREE.Clock();
 
 const updateSize = (event) => {
-    sphere.position.y = window.scrollY * .001;
-}
+  sphere.position.y = window.scrollY * 0.001;
+};
 
-window.addEventListener("scroll", updateSize)
+window.addEventListener("scroll", updateSize);
 
 const tick = () => {
   targetX = mouseX * 0.004;
@@ -216,14 +215,23 @@ function addStar() {
 
   const [x, y, z] = Array(3)
     .fill()
-    .map(() => THREE.MathUtils.randFloatSpread(115));
+    .map(() => THREE.MathUtils.randFloatSpread(100));
 
   star.position.z = 30;
   // star.rotation.x += 0.5 * (targetY - sphere.rotation.x);
   star.position.x = x;
   star.position.set(x, y, z);
+  star.userData.rx = Math.random() * 0.01 - 0.005;
+  star.userData.ry = Math.random() * 0.01 - 0.005;
+  star.userData.rz = Math.random() * 0.01 - 0.005;
+  
+    star.rotation.x += star.userData.rx;
+    star.rotation.y += star.userData.ry;
+    star.rotation.z += star.userData.rz;
+  
   scene.add(star);
 }
+
 
 
 Array(200).fill().forEach(addStar);
